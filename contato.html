@@ -14,7 +14,7 @@
     <header class="header" id="header">
         <nav class="nav container">
             <div class="nav__logo">
-                <h2>SANTEC</h2>
+                <img src="./images/santec_logo.png" alt="SANTEC - Engenharia e Serviços" style="height: 50px; width: auto;">
                 <span>Engenharia e Serviços</span>
             </div>
             
@@ -156,8 +156,8 @@
                         <h3>Solicite seu Orçamento</h3>
                         <p>Preencha o formulário abaixo e entraremos em contato em breve.</p>
                         
-                        <form class="contact__form" id="contact-form">
-                            <div class="form__row">
+                        <form class="contact__form" id="contact-form" action="https://formspree.io/f/mqayzrkv" method="POST">
+                            
                                 <div class="form__group">
                                     <input type="text" id="name" name="name" class="form__input" placeholder=" " required>
                                     <label for="name" class="form__label">Nome Completo *</label>
@@ -167,11 +167,11 @@
                                     <input type="email" id="email" name="email" class="form__input" placeholder=" " required>
                                     <label for="email" class="form__label">E-mail *</label>
                                 </div>
-                            </div>
                             
-                            <div class="form__row">
+                            
+                            
                                 <div class="form__group">
-                                    <input type="tel" id="phone" name="phone" class="form__input" placeholder=" " required>
+                                    <input type="tel" id="phone" name="telefone" class="form__input" placeholder=" " required>
                                     <label for="phone" class="form__label">Telefone *</label>
                                 </div>
                                 
@@ -179,52 +179,12 @@
                                     <input type="text" id="company" name="company" class="form__input" placeholder=" ">
                                     <label for="company" class="form__label">Empresa</label>
                                 </div>
-                            </div>
+                            
+                            
                             
                             <div class="form__group">
-                                <select id="service" name="service" class="form__input" required>
-                                    <option value="">Selecione o serviço</option>
-                                    <option value="construcao">Construção Civil</option>
-                                    <option value="drenagens">Drenagens</option>
-                                    <option value="geotecnicas">Obras Geotécnicas</option>
-                                    <option value="reforma">Reforma de Edificações</option>
-                                    <option value="demolicao">Demolição</option>
-                                    <option value="pavimentacao">Reparos de Pavimentação</option>
-                                    <option value="fundacao">Fundação</option>
-                                    <option value="impermeabilizacao">Impermeabilização</option>
-                                    <option value="recuperacao">Recuperação de Estruturas</option>
-                                    <option value="escavacao">Escavação e Terraplenagem</option>
-                                    <option value="outros">Outros</option>
-                                </select>
-                                <label for="service" class="form__label">Tipo de Serviço *</label>
-                            </div>
-                            
-                            <div class="form__group">
-                                <input type="text" id="location" name="location" class="form__input" placeholder=" ">
-                                <label for="location" class="form__label">Local da Obra</label>
-                            </div>
-                            
-                            <div class="form__group">
-                                <select id="budget" name="budget" class="form__input">
-                                    <option value="">Selecione a faixa de orçamento</option>
-                                    <option value="ate-50k">Até R$ 50.000</option>
-                                    <option value="50k-100k">R$ 50.000 - R$ 100.000</option>
-                                    <option value="100k-500k">R$ 100.000 - R$ 500.000</option>
-                                    <option value="500k-1m">R$ 500.000 - R$ 1.000.000</option>
-                                    <option value="acima-1m">Acima de R$ 1.000.000</option>
-                                    <option value="nao-definido">Não definido</option>
-                                </select>
-                                <label for="budget" class="form__label">Orçamento Estimado</label>
-                            </div>
-                            
-                            <div class="form__group">
-                                <textarea id="message" name="message" class="form__input form__textarea" placeholder=" " required></textarea>
+                                <textarea id="message" name="descricao_do_projeto" class="form__input form__textarea" placeholder=" " required></textarea>
                                 <label for="message" class="form__label">Descrição do Projeto *</label>
-                            </div>
-                            
-                            <div class="form__group form__checkbox">
-                                <input type="checkbox" id="privacy" name="privacy" required>
-                                <label for="privacy">Concordo com a <a href="#" target="_blank">Política de Privacidade</a> *</label>
                             </div>
                             
                             <button type="submit" class="btn btn--primary btn--full">
@@ -244,11 +204,10 @@
                     <h2 class="section__title">Nossa Localização</h2>
                     <p class="section__subtitle">Visite nosso escritório em Palmas-TO</p>
                 </div>
-                
                 <div class="map__container">
                     <div class="map__embed">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.0234567890123!2d-48.3333333!3d-10.1666667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDA5JzYwLjAiUyA0OMKwMjAnMDAuMCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr" 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3301.8388701240883!2d-48.3347983174154!3d-10.215508945833085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x933b34bdd563d391%3A0x35f65eec5fef2119!2sEdificio%20Executive%20Center!5e0!3m2!1spt-BR!2sbr!4v1758647040303!5m2!1spt-BR!2sbr" 
                             width="100%" 
                             height="400" 
                             style="border:0;" 
@@ -283,13 +242,11 @@
                                 <i class="fas fa-bus"></i>
                                 <div>
                                     <h4>Transporte Público</h4>
-                                    <p>Linhas de ônibus: 101, 102, 201<br>
-                                    Ponto mais próximo: 200m</p>
                                 </div>
                             </div>
                         </div>
                         
-                        <a href="https://maps.google.com/?q=501+sul+Av+Teotonio+Segurado+Palmas+TO" target="_blank" class="btn btn--secondary">
+                        <a href="https://maps.google.com/?q=Edificio+Executive+Center+Palmas+TO" target="_blank" class="btn btn--secondary">
                             <i class="fas fa-directions"></i>
                             Ver no Google Maps
                         </a>

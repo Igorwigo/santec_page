@@ -184,20 +184,14 @@ function validateContactForm(data) {
         errors.push('E-mail inválido');
     }
     
-    if (!data.phone || data.phone.length < 10) {
-        errors.push('Telefone inválido');
+    const cleanPhone = data.telefone ? data.telefone.replace(/\D/g, "") : "";
+    if (!cleanPhone || cleanPhone.length < 10 || cleanPhone.length > 11) {
+        errors.push("Telefone inválido (mínimo 10, máximo 11 dígitos)");
     }
     
-    if (!data.service) {
-        errors.push('Selecione um tipo de serviço');
-    }
     
-    if (!data.message || data.message.trim().length < 10) {
+    if (!data.descricao_do_projeto || data.descricao_do_projeto.trim().length < 10) {
         errors.push('Mensagem deve ter pelo menos 10 caracteres');
-    }
-    
-    if (!data.privacy) {
-        errors.push('Você deve concordar com a Política de Privacidade');
     }
     
     if (errors.length > 0) {
@@ -216,25 +210,25 @@ function isValidEmail(email) {
 
 // ===== PHONE MASK =====
 function initializePhoneMask() {
-    const phoneInputs = document.querySelectorAll('input[type="tel"]');
-    
-    phoneInputs.forEach(input => {
-        input.addEventListener('input', (e) => {
-            let value = e.target.value.replace(/\D/g, '');
-            
-            if (value.length <= 11) {
-                if (value.length <= 2) {
-                    value = value.replace(/(\d{0,2})/, '($1');
-                } else if (value.length <= 7) {
-                    value = value.replace(/(\d{2})(\d{0,5})/, '($1) $2');
-                } else {
-                    value = value.replace(/(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
-                }
+    const phoneInput = document.getElementById("phone");
+
+    if (phoneInput) {
+        phoneInput.addEventListener("input", function (e) {
+            let value = e.target.value.replace(/\D/g, "");
+            let formattedValue = "";
+
+            if (value.length > 0) {
+                formattedValue = "(" + value.substring(0, 2);
             }
-            
-            e.target.value = value;
+            if (value.length >= 3) {
+                formattedValue += ") " + value.substring(2, 7);
+            }
+            if (value.length >= 8) {
+                formattedValue += "-" + value.substring(7, 11);
+            }
+            e.target.value = formattedValue;
         });
-    });
+    }
 }
 
 // ===== MODALS =====

@@ -20,13 +20,13 @@ body {
 /* ===== VARIABLES ===== */
 :root {
     /* Colors */
-    --primary-color: #1e40af;
-    --primary-light: #3b82f6;
-    --secondary-color: #f59e0b;
-    --secondary-light: #fbbf24;
-    --text-color: #374151;
-    --text-light: #6b7280;
-    --background-color: #f3f4f6;
+    --primary-color: #0A2240; /* Navy Blue from logo */
+    --primary-light: #1A3A5A; /* Slightly lighter primary for hover/active states */
+    --secondary-color: #D79A2A; /* Golden Yellow from logo */
+    --secondary-light: #E8B04F; /* Slightly lighter secondary for hover/active states */
+    --text-color: #0A2240; /* Using primary color for main text */
+    --text-light: #6B7280; /* Keeping original light text color */
+    --background-color: #F1E1C0; /* Light Cream from logo for background */
     --white: #ffffff;
     --black: #000000;
     --success: #10b981;
@@ -290,7 +290,7 @@ body {
 
 /* ===== HOME SECTION ===== */
 .home {
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    background: linear-gradient(135deg, var(--white) 0%, var(--accent-color) 100%);
     min-height: 90vh;
     display: flex;
     align-items: center;
@@ -1497,7 +1497,7 @@ body {
 }
 
 .form__textarea {
-    min-height: 120px;
+    min-height: 270px;
     resize: vertical;
 }
 
