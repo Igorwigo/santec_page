@@ -13,8 +13,8 @@ body {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    color: #374151;
-    background-color: #ffffff;
+    background: linear-gradient(180deg, #0A2240 0%, #4A6C9B 100%); /* Dark blue to lighter blue gradient */
+    background-attachment: fixed; /* Ensures the gradient covers the entire viewport */
 }
 
 /* ===== VARIABLES ===== */
@@ -82,6 +82,13 @@ body {
     margin-bottom: 1rem;
 }
 
+.section__title__white {
+    font-size: var(--font-size-4xl);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
 .section__subtitle {
     font-size: var(--font-size-lg);
     color: var(--text-light);
@@ -89,8 +96,16 @@ body {
     margin: 0 auto;
 }
 
+.section__subtitle__white {
+    font-size: var(--font-size-lg);
+    color: var(--white);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
 .highlight {
-    color: var(--primary-color);
+    color: var(--white);
     position: relative;
 }
 
@@ -128,20 +143,20 @@ body {
 }
 
 .btn--primary:hover {
-    background: var(--primary-light);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
 }
 
 .btn--secondary {
     background: transparent;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    color: var(--white);
+    border: 2px solid var(--white);
 }
 
 .btn--secondary:hover {
-    background: var(--primary-color);
-    color: var(--white);
+    background: var(--white);
+    color: var(--primary-color);
     transform: translateY(-2px);
 }
 
@@ -308,12 +323,12 @@ body {
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: 1.5rem;
-    color: var(--text-color);
+    color: var(--white);
 }
 
 .home__description {
     font-size: var(--font-size-lg);
-    color: var(--text-light);
+    color: var(--white);
     margin-bottom: 2rem;
     line-height: 1.7;
 }
@@ -372,7 +387,7 @@ body {
 
 /* ===== SERVICES PREVIEW ===== */
 .services-preview {
-    background: var(--white);
+    background: transparent;
 }
 
 .services-preview__container {
@@ -444,7 +459,7 @@ body {
 
 /* ===== ABOUT PREVIEW ===== */
 .about-preview {
-    background: var(--background-color);
+    background: transparent;
 }
 
 .about-preview__container {
@@ -452,18 +467,19 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
+    color: var(--white);
 }
 
 .about-preview__content h2 {
     font-size: var(--font-size-4xl);
     font-weight: 700;
     margin-bottom: 1.5rem;
-    color: var(--text-color);
+    color: var(--white);
 }
 
 .about-preview__content p {
     font-size: var(--font-size-lg);
-    color: var(--text-light);
+    color: var(--white);
     margin-bottom: 2rem;
     line-height: 1.7;
 }
