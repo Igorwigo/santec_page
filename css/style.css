@@ -1056,9 +1056,7 @@ body {
     background: var(--white);
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: var(--shadow-md);
     transition: var(--transition);
-    border: 1px solid #e5e7eb;
 }
 
 .service__card:hover {
@@ -1098,6 +1096,7 @@ body {
 }
 
 .service__card li {
+    text-align: left;
     color: var(--text-light);
     margin-bottom: 0.5rem;
     position: relative;

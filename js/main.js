@@ -1348,16 +1348,21 @@ function initializePageFeatures() {
     if (document.querySelector(".services-preview__container")) {
         initializeServiceCarousels();
     }
+    if (document.querySelector(".services__container")) {
+        initializeServiceCarousels();
+    }
 }
 
 
  document.addEventListener("DOMContentLoaded", function() {
-    debugger  
+     if (!document.querySelector("#contact-form")){
+        return
+     }
+
     const form = document.getElementById("contact-form");
       const messageBox = document.getElementById("form-message");
 
       form.addEventListener("submit", async function(e) {
-        debugger
         e.preventDefault(); // Impede o redirecionamento padrão
 
         const formData = new FormData(form);
