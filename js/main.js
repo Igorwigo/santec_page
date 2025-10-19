@@ -189,11 +189,6 @@ function validateContactForm(data) {
         errors.push("Telefone inválido (mínimo 10, máximo 11 dígitos)");
     }
     
-    
-    if (!data.descricao_do_projeto || data.descricao_do_projeto.trim().length < 10) {
-        errors.push('Mensagem deve ter pelo menos 10 caracteres');
-    }
-    
     if (errors.length > 0) {
         showNotification(errors.join('<br>'), 'error');
         return false;
@@ -1305,3 +1300,88 @@ document.addEventListener('DOMContentLoaded', initializeLazyLoading);
 
 console.log('SANTEC Website JavaScript loaded successfully!');
 
+
+
+// ===== SERVICE CARD IMAGE CAROUSEL =====
+function initializeServiceCarousels() {
+    document.querySelectorAll(".services-preview__container .service-preview__card").forEach(card => {
+        const images = card.querySelectorAll(".service-preview__image");
+        const dots = card.querySelectorAll(".dot");
+        let currentImageIndex = 0;
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.classList.remove("active");
+                if (i === index) {
+                    img.classList.add("active");
+                }
+            });
+            dots.forEach((dot, i) => {
+                dot.classList.remove("active");
+                if (i === index) {
+                    dot.classList.add("active");
+                }
+            });
+        }
+
+        dots.forEach(dot => {
+            dot.addEventListener("click", (e) => {
+                const slideIndex = parseInt(e.target.dataset.slide);
+                currentImageIndex = slideIndex;
+                showImage(currentImageIndex);
+            });
+        });
+
+        // Auto-advance carousel
+        setInterval(() => {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            showImage(currentImageIndex);
+        }, 5000); // Change image every 5 seconds
+    });
+}
+
+// Add this to initializeWebsite or DOMContentLoaded
+// Make sure to call initializeServiceCarousels() after the DOM is loaded
+// For now, I'll add it to initializePageFeatures() as it's page-specific
+
+function initializePageFeatures() {
+    if (document.querySelector(".services-preview__container")) {
+        initializeServiceCarousels();
+    }
+}
+
+
+ document.addEventListener("DOMContentLoaded", function() {
+    debugger  
+    const form = document.getElementById("contact-form");
+      const messageBox = document.getElementById("form-message");
+
+      form.addEventListener("submit", async function(e) {
+        debugger
+        e.preventDefault(); // Impede o redirecionamento padrão
+
+        const formData = new FormData(form);
+        messageBox.style.display = "none";
+
+        try {
+          const response = await fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (response.ok) {
+           showNotification('Mensagem enviada com sucesso! Entraremos em contato em breve.', 'success');
+            form.reset();
+          } else {
+            messageBox.textContent = "Erro ao enviar. Tente novamente mais tarde ❌";
+            messageBox.style.color = "red";
+            messageBox.style.display = "block";
+          }
+        } catch (error) {
+          messageBox.textContent = "Ocorreu um erro de conexão ❌";
+          messageBox.style.color = "red";
+          messageBox.style.display = "block";
+        }
+      });
+    });

@@ -154,43 +154,51 @@
                     <div class="contact__form-container">
                         <h3>Solicite seu Orçamento</h3>
                         <p>Preencha o formulário abaixo e entraremos em contato em breve.</p>
-                        
-                        <form class="contact__form" id="contact-form" action="https://formspree.io/f/mqayzrkv" method="POST">
-                            
-                                <div class="form__group">
-                                    <input type="text" id="name" name="name" class="form__input" placeholder=" " required>
-                                    <label for="name" class="form__label">Nome Completo *</label>
-                                </div>
-                                
-                                <div class="form__group">
-                                    <input type="email" id="email" name="email" class="form__input" placeholder=" " required>
-                                    <label for="email" class="form__label">E-mail *</label>
-                                </div>
-                            
-                            
-                            
-                                <div class="form__group">
-                                    <input type="tel" id="phone" name="telefone" class="form__input" placeholder=" " required>
-                                    <label for="phone" class="form__label">Telefone *</label>
-                                </div>
-                                
-                                <div class="form__group">
-                                    <input type="text" id="company" name="company" class="form__input" placeholder=" ">
-                                    <label for="company" class="form__label">Empresa</label>
-                                </div>
-                            
-                            
-                            
+                        <form 
+                            id="contact-form"
+                            action="https://formspree.io/f/mqayzrkv" 
+                            method="POST" 
+                            class="contact-form"
+                            >
+                            <div class="form__group">
+                                <input type="text" id="name" name="name" class="form__input" placeholder=" " required>
+                                <label for="name" class="form__label">Nome Completo *</label>
+                            </div>
+
+                            <div class="form__group">
+                                <input type="email" id="email" name="email" class="form__input" placeholder=" " required>
+                                <label for="email" class="form__label">E-mail *</label>
+                            </div>
+
+                            <div class="form__group">
+                                <input type="tel" id="phone" name="telefone" class="form__input" placeholder=" " required>
+                                <label for="phone" class="form__label">Telefone *</label>
+                            </div>
+
+                            <div class="form__group">
+                                <input type="text" id="empresa" name="empresa" class="form__input" placeholder=" ">
+                                <label for="empresa" class="form__label">Empresa</label>
+                            </div>
+
                             <div class="form__group">
                                 <textarea id="message" name="descricao_do_projeto" class="form__input form__textarea" placeholder=" " required></textarea>
                                 <label for="message" class="form__label">Descrição do Projeto *</label>
                             </div>
-                            
+
+                            <!-- Campo oculto opcional para evitar SPAM -->
+                            <input type="hidden" name="_subject" value="Novo contato do site">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
                             <button type="submit" class="btn btn--primary btn--full">
                                 <i class="fas fa-paper-plane"></i>
                                 Enviar Solicitação
                             </button>
+                             <p id="form-message"></p>
                         </form>
+
+
+
+                        
                     </div>
                 </div>
             </div>
