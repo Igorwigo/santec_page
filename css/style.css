@@ -13,7 +13,7 @@ body {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    background: linear-gradient(180deg, #0A2240 0%, #4A6C9B 100%); /* Dark blue to lighter blue gradient */
+    background: var(--gradient); /* Dark blue to lighter blue gradient */
     background-attachment: fixed; /* Ensures the gradient covers the entire viewport */
 }
 
@@ -32,6 +32,7 @@ body {
     --success: #10b981;
     --error: #ef4444;
     --warning: #f59e0b;
+    --gradient: linear-gradient(180deg, #0A2240 0%, #4A6C9B 100%);
     
     /* Spacing */
     --container-max-width: 1200px;
@@ -1096,7 +1097,6 @@ body {
 }
 
 .service__card li {
-    text-align: left;
     color: var(--text-light);
     margin-bottom: 0.5rem;
     position: relative;
@@ -1217,7 +1217,7 @@ body {
 
 /* ===== PROJECTS GRID ===== */
 .projects {
-    background: var(--background-color);
+    background: var(--gradient);
 }
 
 .projects__container {
@@ -1599,7 +1599,7 @@ body {
 
 /* ===== MAP SECTION ===== */
 .map {
-    background: var(--background-color);
+    background: var(--gradient);
 }
 
 .map__container {
@@ -1669,7 +1669,7 @@ body {
 }
 
 .faq__item {
-    background: var(--background-color);
+    background: var(--gradient);
     border-radius: 8px;
     margin-bottom: 1rem;
     overflow: hidden;
@@ -1695,7 +1695,7 @@ body {
 
 .faq__question h4 {
     font-weight: 600;
-    color: var(--text-color);
+    color: var(--white);
     margin: 0;
 }
 
@@ -1721,7 +1721,7 @@ body {
 }
 
 .faq__answer p {
-    color: var(--text-light);
+    color: var(--white);
     line-height: 1.6;
     margin: 0;
 }
@@ -1734,7 +1734,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.932);
     z-index: 2000;
     align-items: center;
     justify-content: center;
@@ -1814,7 +1814,7 @@ body {
 .footer__logo h3 {
     font-size: var(--font-size-2xl);
     font-weight: 700;
-    color: var(--primary-light);
+    color: var(--white);
 }
 
 .footer__logo span {

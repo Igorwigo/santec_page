@@ -937,33 +937,39 @@ function initializePageFeatures() {
 
 // ===== PROJECT FILTERS =====
 function initializeProjectFilters() {
-    const filterButtons = document.querySelectorAll('.filter__btn');
-    const projectCards = document.querySelectorAll('.project__card');
-    
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const filter = button.getAttribute('data-filter');
-            
-            // Update active button
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-            
-            // Filter projects
+    const filterButtons = document.querySelectorAll(".filter__btn");
+    const projectCards = document.querySelectorAll(".project__card");
+
+    // guarda display original
+    projectCards.forEach((card) => {
+        const style = window.getComputedStyle(card);
+        card.dataset.origDisplay = style.display === "none" ? "block" : style.display;
+    });
+
+    filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const filter = button.dataset.filter || "all";
+
+            filterButtons.forEach((btn) => btn.classList.remove("active"));
+            button.classList.add("active");
+
             filterProjects(filter, projectCards);
             currentFilter = filter;
         });
     });
+
+    filterProjects(currentFilter, projectCards);
 }
 
 function filterProjects(filter, projectCards) {
-    projectCards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        
-        if (filter === 'all' || category === filter) {
-            card.style.display = 'block';
-            card.style.animation = 'fadeInUp 0.5s ease-out';
+    projectCards.forEach((card) => {
+        const category = card.dataset.category || "";
+
+        if (filter === "all" || category === filter) {
+            card.style.display = card.dataset.origDisplay || "block";
+            card.style.animation = "fadeInUp 0.5s ease-out";
         } else {
-            card.style.display = 'none';
+            card.style.display = "none";
         }
     });
 }
@@ -1345,12 +1351,30 @@ function initializeServiceCarousels() {
 // For now, I'll add it to initializePageFeatures() as it's page-specific
 
 function initializePageFeatures() {
-    if (document.querySelector(".services-preview__container")) {
+    // === Serviços ===
+    if (document.querySelector(".services-preview__container") || document.querySelector(".services__container")) {
         initializeServiceCarousels();
     }
-    if (document.querySelector(".services__container")) {
-        initializeServiceCarousels();
+
+    // === Projetos ===
+    if (document.querySelectorAll(".filter__btn").length > 0) {
+        initializeProjectFilters();
     }
+
+    // === Botão "Carregar Mais" ===
+    const loadMoreBtn = document.getElementById("loadMoreBtn");
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener("click", loadMoreProjects);
+    }
+
+    // === FAQ ===
+    const faqItems = document.querySelectorAll(".faq__item");
+    if (faqItems.length > 0) {
+        initializeFAQ();
+    }
+
+    // === Contadores ===
+    initializeCounters();
 }
 
 

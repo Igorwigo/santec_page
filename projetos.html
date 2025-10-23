@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -76,9 +77,9 @@
             <div class="container">
                 <div class="filters__container">
                     <button class="filter__btn active" data-filter="all">Todos</button>
-                    <button class="filter__btn" data-filter="construcao">Obras Civis</button>
-                    <button class="filter__btn" data-filter="drenagem">Saneamento</button>
-                    <button class="filter__btn" data-filter="reforma">Obras Geotécnicas</button>
+                    <button class="filter__btn" data-filter="obras-civis">Obras Civis</button>
+                    <button class="filter__btn" data-filter="saneamento">Saneamento</button>
+                    <button class="filter__btn" data-filter="obras-geotecnicas">Obras Geotécnicas</button>
                 </div>
             </div>
         </section>
@@ -88,14 +89,14 @@
             <div class="container">
                 <div class="projects__container">
                     <!-- Projeto 1 - Construção -->
-                    <div class="project__card" data-category="construcao">
+                    <div class="project__card" data-category="obras-civis">
                         <div class="project__image">
                             <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Edifício Comercial">
                             <div class="project__overlay">
                                 <div class="project__info">
                                     <h3>Edifício Comercial Centro</h3>
                                     <p>Construção de edifício comercial de 8 andares no centro de Palmas</p>
-                                    <span class="project__category">Construção Civil</span>
+                                    <span class="project__category">Obras Civis</span>
                                 </div>
                                 <button class="project__btn" onclick="openProjectModal('projeto1')">
                                     <i class="fas fa-eye"></i>
@@ -104,15 +105,15 @@
                         </div>
                     </div>
 
-                    <!-- Projeto 2 - Drenagem -->
-                    <div class="project__card" data-category="drenagem">
+                    <!-- Projeto 2 - Saneamento -->
+                    <div class="project__card" data-category="saneamento">
                         <div class="project__image">
                             <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sistema de Drenagem">
                             <div class="project__overlay">
                                 <div class="project__info">
                                     <h3>Sistema de Drenagem Urbana</h3>
                                     <p>Implementação de sistema completo de drenagem no Setor Sul</p>
-                                    <span class="project__category">Drenagem</span>
+                                    <span class="project__category">Saneamento</span>
                                 </div>
                                 <button class="project__btn" onclick="openProjectModal('projeto2')">
                                     <i class="fas fa-eye"></i>
@@ -122,7 +123,7 @@
                     </div>
 
                     <!-- Projeto 3 - Reforma -->
-                    <div class="project__card" data-category="reforma">
+                    <div class="project__card" data-category="obras-civis">
                         <div class="project__image">
                             <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Reforma Residencial">
                             <div class="project__overlay">
@@ -139,7 +140,7 @@
                     </div>
 
                     <!-- Projeto 4 - Pavimentação -->
-                    <div class="project__card" data-category="pavimentacao">
+                    <div class="project__card" data-category="obras-civis">
                         <div class="project__image">
                             <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pavimentação">
                             <div class="project__overlay">
@@ -155,15 +156,15 @@
                         </div>
                     </div>
 
-                    <!-- Projeto 5 - Fundação -->
-                    <div class="project__card" data-category="fundacao">
+                    <!-- Projeto 5 - Obras Geotécnicas -->
+                    <div class="project__card" data-category="obras-geotecnicas">
                         <div class="project__image">
                             <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fundação">
                             <div class="project__overlay">
                                 <div class="project__info">
                                     <h3>Fundação Galpão Industrial</h3>
                                     <p>Execução de fundação profunda para galpão de 2000m²</p>
-                                    <span class="project__category">Fundação</span>
+                                    <span class="project__category">Obras Geotécnicas</span>
                                 </div>
                                 <button class="project__btn" onclick="openProjectModal('projeto5')">
                                     <i class="fas fa-eye"></i>
@@ -173,7 +174,7 @@
                     </div>
 
                     <!-- Projeto 6 - Demolição -->
-                    <div class="project__card" data-category="demolicao">
+                    <div class="project__card" data-category="obras-civis">
                         <div class="project__image">
                             <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Demolição">
                             <div class="project__overlay">
@@ -190,14 +191,14 @@
                     </div>
 
                     <!-- Projeto 7 - Construção -->
-                    <div class="project__card" data-category="construcao">
+                    <div class="project__card" data-category="obras-civis">
                         <div class="project__image">
                             <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Conjunto Residencial">
                             <div class="project__overlay">
                                 <div class="project__info">
                                     <h3>Conjunto Residencial</h3>
                                     <p>Construção de 50 unidades habitacionais</p>
-                                    <span class="project__category">Construção Civil</span>
+                                    <span class="project__category">Obras Civis</span>
                                 </div>
                                 <button class="project__btn" onclick="openProjectModal('projeto7')">
                                     <i class="fas fa-eye"></i>
@@ -207,7 +208,7 @@
                     </div>
 
                     <!-- Projeto 8 - Reforma -->
-                    <div class="project__card" data-category="reforma">
+                    <div class="project__card" data-category="obras-civis">
                         <div class="project__image">
                             <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Reforma Comercial">
                             <div class="project__overlay">
@@ -223,15 +224,15 @@
                         </div>
                     </div>
 
-                    <!-- Projeto 9 - Drenagem -->
-                    <div class="project__card" data-category="drenagem">
+                    <!-- Projeto 9 - Saneamento -->
+                    <div class="project__card" data-category="saneamento">
                         <div class="project__image">
                             <img src="https://images.unsplash.com/photo-1569163139394-de4e4f43e4e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Drenagem Rural">
                             <div class="project__overlay">
                                 <div class="project__info">
                                     <h3>Drenagem Rural</h3>
                                     <p>Sistema de drenagem para área agrícola de 500 hectares</p>
-                                    <span class="project__category">Drenagem</span>
+                                    <span class="project__category">Saneamento</span>
                                 </div>
                                 <button class="project__btn" onclick="openProjectModal('projeto9')">
                                     <i class="fas fa-eye"></i>
@@ -239,68 +240,88 @@
                             </div>
                         </div>
                     </div>
-                </div>
 
+                    <!-- Projeto 10 - Obras Geotécnicas -->
+                    <div class="project__card" data-category="obras-geotecnicas">
+                        <div class="project__image">
+                            <img src="https://images.unsplash.com/photo-1502691478147-386050b73062?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Obras de Contenção">
+                            <div class="project__overlay">
+                                <div class="project__info">
+                                    <h3>Obras de Contenção</h3>
+                                    <p>Execução de obras de contenção em taludes e encostas</p>
+                                    <span class="project__category">Obras Geotécnicas</span>
+                                </div>
+                                <button class="project__btn" onclick="openProjectModal('projeto10')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
 
-            </div>
-        </section>
+                    <!-- Projeto 11 - Ponte -->
+                    <div class="project__card" data-category="obras-civis">
+                        <div class="project__image">
+                            <img src="https://images.unsplash.com/photo-1533090420-f5a6b0c2a2b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Construção de Ponte">
+                            <div class="project__overlay">
+                                <div class="project__info">
+                                    <h3>Construção de Ponte</h3>
+                                    <p>Construção de ponte sobre o rio para facilitar o acesso</p>
+                                    <span class="project__category">Obras Civis</span>
+                                </div>
+                                <button class="project__btn" onclick="openProjectModal('projeto11')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
 
-       
-
-        <!-- CTA Section -->
-        <section class="cta section">
-            <div class="container">
-                <div class="cta__container">
-                    <div class="cta__content">
-                        <h2>Quer seu projeto aqui?</h2>
-                        <p>Entre em contato conosco e vamos transformar sua ideia em realidade. Faça parte da nossa galeria de sucessos.</p>
-                        <div class="cta__buttons">
-                            <a href="contato.html" class="btn btn--primary">
-                                <i class="fas fa-rocket"></i>
-                                Iniciar Projeto
-                            </a>
-                            <a href="servicos.html" class="btn btn--secondary">
-                                <i class="fas fa-list"></i>
-                                Ver Serviços
-                            </a>
+                    <!-- Projeto 12 - Reforma -->
+                    <div class="project__card" data-category="obras-civis">
+                        <div class="project__image">
+                            <img src="https://images.unsplash.com/photo-1517840133-e9622d10f328?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Reforma de Escola Pública">
+                            <div class="project__overlay">
+                                <div class="project__info">
+                                    <h3>Reforma de Escola Pública</h3>
+                                    <p>Reforma completa de escola pública, incluindo modernização de salas</p>
+                                    <span class="project__category">Reforma</span>
+                                </div>
+                                <button class="project__btn" onclick="openProjectModal('projeto12')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-    </main>
 
-    <!-- Project Modal -->
-    <div class="modal" id="projectModal">
-        <div class="modal__content modal__content--large">
-            <div class="modal__header">
-                <h3 id="projectModalTitle">Título do Projeto</h3>
-                <button class="modal__close" onclick="closeProjectModal()">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="modal__body">
-                <div id="projectModalContent">
-                    <!-- Conteúdo será inserido dinamicamente -->
+
+
+        <!-- CTA Section -->
+        <section class="cta section">
+            <div class="container">
+                <div class="cta__content">
+                    <h2>Quer seu projeto aqui?</h2>
+                    <p>Entre em contato conosco e vamos transformar sua ideia em realidade. Faça parte da nossa galeria de sucessos.</p>
+                    <a href="contato.html" class="btn btn--primary">Fale Conosco</a>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer__content">
+            <div class="footer__container">
                 <div class="footer__section">
                     <div class="footer__logo">
-                        <h3>SANTEC</h3>
-                        <span>Engenharia e Serviços</span>
+                        <img src="./images/santec_logo.png" alt="SANTEC - Engenharia e Serviços" style="height: 50px; width: auto;">
                     </div>
-                    <p>Transformando ideias em realidade através da excelência em engenharia e construção civil.</p>
+                    <p>Construindo o futuro com solidez, inovação e confiança.</p>
                 </div>
                 
                 <div class="footer__section">
-                    <h4>Páginas</h4>
+                    <h4>Navegação</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="sobre.html">Sobre</a></li>
@@ -311,31 +332,55 @@
                 </div>
                 
                 <div class="footer__section">
-                    <h4>Serviços</h4>
+                    <h4>Contato</h4>
                     <ul>
-                        <li><a href="servicos.html">Obras Civis</a></li>
-                        <li><a href="servicos.html">Saneamento</a></li>
-                        <li><a href="servicos.html">Obras Geotécnicas</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Palmas, Tocantins</li>
+                        <li><i class="fas fa-phone"></i> (63) 99263-4000</li>
+                        <li><i class="fas fa-envelope"></i> contato@santeceng.com.br</li>
                     </ul>
                 </div>
                 
                 <div class="footer__section">
-                    <h4>Contato</h4>
-                    <ul>
-                        <li><i class="fas fa-phone"></i> (63) 99263-4000</li>
-                        <li><i class="fas fa-envelope"></i> santecengcivil@gmail.com</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Palmas - TO</li>
-                    </ul>
+                    <h4>Siga-nos</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
             </div>
             
             <div class="footer__bottom">
-                <p>&copy; 2025 SANTEC - Engenharia e Serviços. Todos os direitos reservados.</p>
+                <p>&copy; 2024 SANTEC Engenharia e Serviços. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Modals -->
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeServiceModal()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <div id="projectModal" class="modal">
+        <div class="modal__content">
+            <div class="modal__close">
+                <span class="close-btn" onclick="closeProjectModal()">&times;</span>
+            </div>
+            
+            <div class="modal__header">
+                <h3 id="projectModalTitle"></h2>
+            </div>
+
+            <div class="modal__body">
+                <div id="projectModalContent"></div>
+            </div>
+        </div>
+    </div>
+
     <script src="./js/main.js"></script>
 </body>
 </html>
