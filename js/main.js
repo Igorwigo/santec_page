@@ -911,29 +911,6 @@ function getProjectData(projectId) {
     return projects[projectId] || null;
 }
 
-// ===== PROJECT FILTERS =====
-function initializePageFeatures() {
-    // Initialize project filters if on projects page
-    const filterButtons = document.querySelectorAll('.filter__btn');
-    if (filterButtons.length > 0) {
-        initializeProjectFilters();
-    }
-    
-    // Initialize FAQ if on contact page
-    const faqItems = document.querySelectorAll('.faq__item');
-    if (faqItems.length > 0) {
-        initializeFAQ();
-    }
-    
-    // Initialize load more button
-    const loadMoreBtn = document.getElementById('loadMoreBtn');
-    if (loadMoreBtn) {
-        loadMoreBtn.addEventListener('click', loadMoreProjects);
-    }
-    
-    // Initialize statistics counter animation
-    initializeCounters();
-}
 
 // ===== PROJECT FILTERS =====
 function initializeProjectFilters() {
@@ -974,30 +951,7 @@ function filterProjects(filter, projectCards) {
     });
 }
 
-// ===== FAQ =====
-function initializeFAQ() {
-    const faqQuestions = document.querySelectorAll('.faq__question');
-    
-    faqQuestions.forEach(question => {
-        question.addEventListener('click', () => {
-            const faqItem = question.parentElement;
-            const answer = faqItem.querySelector('.faq__answer');
-            const isActive = question.classList.contains('active');
-            
-            // Close all other FAQ items
-            faqQuestions.forEach(q => {
-                q.classList.remove('active');
-                q.parentElement.querySelector('.faq__answer').classList.remove('active');
-            });
-            
-            // Toggle current item
-            if (!isActive) {
-                question.classList.add('active');
-                answer.classList.add('active');
-            }
-        });
-    });
-}
+
 
 function toggleFaq(element) {
     const faqItem = element.parentElement;
@@ -1365,12 +1319,6 @@ function initializePageFeatures() {
     const loadMoreBtn = document.getElementById("loadMoreBtn");
     if (loadMoreBtn) {
         loadMoreBtn.addEventListener("click", loadMoreProjects);
-    }
-
-    // === FAQ ===
-    const faqItems = document.querySelectorAll(".faq__item");
-    if (faqItems.length > 0) {
-        initializeFAQ();
     }
 
     // === Contadores ===

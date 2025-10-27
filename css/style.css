@@ -35,7 +35,7 @@ body {
     --gradient: linear-gradient(180deg, #0A2240 0%, #4A6C9B 100%);
     
     /* Spacing */
-    --container-max-width: 1200px;
+    --container-max-width: 1500px;
     --section-padding: 5rem 0;
     --header-height: 80px;
     
@@ -149,6 +149,30 @@ body {
     border: 2px solid var(--white);
 }
 
+.btn--primary--index {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.btn--primary--index:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    transform: translateY(-1px);
+}
+
+
+.btn--secondary--black {
+    background: transparent;
+    color: var(--text-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn--secondary--black:hover {
+    background: var(--white);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
 .btn--secondary {
     background: transparent;
     color: var(--white);
@@ -239,19 +263,36 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 9px;
     background: var(--secondary-color);
     color: var(--white);
     text-decoration: none;
     border-radius: 6px;
     font-weight: 500;
     transition: var(--transition);
+    width: 170px;
+    height: 38px;
+    font-size: 15px;
+
+    
 }
 
 .nav__phone:hover {
-    background: var(--secondary-light);
+    background: var(--primary-light);
     transform: translateY(-1px);
 }
+
+.nav__phone--secondary {
+    background: var(--primary-light); /* Um fundo diferente para o segundo número, se necessário */
+    color: var(--white);
+}
+
+.nav__phone--secondary:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    transform: translateY(-1px);
+}
+
 
 .nav__toggle,
 .nav__close {
@@ -1700,7 +1741,7 @@ body {
 }
 
 .faq__question i {
-    color: var(--primary-color);
+    color: var(--white);
     transition: var(--transition);
 }
 
